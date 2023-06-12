@@ -1,17 +1,20 @@
-import { StyleSheet, Text, View, ImageBackground, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, ImageBackground, TouchableOpacity } from 'react-native';
+import { useState } from 'react';
 import { useFonts } from 'expo-font';
-import { useState, useEffect } from 'react';
+import { StatusBar } from 'react-native';
 
 export default function App() {
 
-  const [loaded] = useFonts({
-    luckyGuy: require('./assets/fonts/LuckiestGuy-Regular.ttf'),
-  });
   const [counter, setCounter] = useState(0)
+
+  const [fontsLoaded] = useFonts({
+    'luckyGuy': require('./assets/fonts/LuckiestGuy-Regular.ttf'),
+  });
 
   return (
 
     <View style={styles.container}>
+      <StatusBar translucent={true}></StatusBar>
       <ImageBackground source={require('./assets/OIP.jpg')} resizeMode="cover" style={styles.image}>
         <Text style={styles.header} >My Tasbeer</Text>
         <Text style={styles.counter} >{counter}</Text>
@@ -28,7 +31,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: 100,
+    marginTop: 20,
   },
   image: {
     flex: 1,
@@ -38,7 +41,7 @@ const styles = StyleSheet.create({
     fontSize: 28,
     fontFamily: 'luckyGuy',
     textAlign: 'center',
-    margin: 20
+    margin: 40
   },
   counter: {
     textAlign: 'center',
