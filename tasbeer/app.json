@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "tasbeer",
+    "name": "tasbeeh",
     "slug": "tasbeer",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -29,7 +29,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "64ad2651-f868-4000-878f-363134fdf5e1"
+        "projectId": "25fc5b74-edd9-479e-9797-b49cce6c0a93"
       }
     }
   }

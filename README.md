@@ -12,3 +12,6 @@
 
 - https://docs.expo.dev/eas/
 
+- npx eas build -p android (initial commit)
+
+- npx eas build -p android --profile preview |(specify apk in eas.json)
